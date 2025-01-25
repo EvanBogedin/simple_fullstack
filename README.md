@@ -1,15 +1,5 @@
-### Set up a new Node.js Project
-npm init -y
-<br />
-<br />
-
-### Install express
-npm install express
-<br />
-<br />
-
-### Install cors
-npm install cors
+### installs all dependencies i.e express & cors
+npm install
 <br />
 <br />
 

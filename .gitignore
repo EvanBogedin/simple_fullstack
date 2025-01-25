@@ -1,4 +1,2 @@
 # Ignore the auth.js file. This prevents the uploading of the username and password to github
 node_modules
-package-lock.json
-package.json
