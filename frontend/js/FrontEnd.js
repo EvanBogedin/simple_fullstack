@@ -11,7 +11,7 @@ const getData = (event) => {
     .then((response) => response.text())
     // When the text data is received, log it to the console
     .then((data) => {
-      console.log(data); // Print the response message in the console
+      console.log(data);
     })
     // If there is an error during the fetch request, log the error to the console
     .catch((error) => {
@@ -41,7 +41,7 @@ const postData = (event) => {
     .then((response) => response.text())
     // When the text data is received, log it to the console
     .then((data) => {
-      console.log(data); // Print the response message in the console
+      console.log(data);
     })
     // If there is an error during the fetch request, log the error to the console
     .catch((error) => {
@@ -49,6 +49,6 @@ const postData = (event) => {
     });
 };
 
-// Get the element with the ID "fetchButton" and add an event listener for the "click" events
+// Get the elements and add an event listener for the "click" events
 document.getElementById("getForm").addEventListener("submit", getData);
 document.getElementById("postForm").addEventListener("submit", postData);
