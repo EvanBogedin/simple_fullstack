@@ -1,10 +1,6 @@
 const getData = (event) => {
   event.preventDefault(); // Prevent the default form submission
 
-  // Get form data
-  //const formData = new FormData(event.target);
-  //const formDataOBject = Object.fromEntries(formData.entries());
-
   // Make a fetch request to the specified URL
   fetch("http://localhost:3000/testGet")
     // When the response is received, convert it to text
