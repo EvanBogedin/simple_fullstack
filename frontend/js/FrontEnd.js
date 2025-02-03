@@ -2,11 +2,11 @@ const getData = (event) => {
   event.preventDefault(); // Prevent the default form submission
 
   // Get form data
-  const formData = new FormData(event.target);
-  const data = Object.fromEntries(formData.entries());
+  //const formData = new FormData(event.target);
+  //const formDataOBject = Object.fromEntries(formData.entries());
 
   // Make a fetch request to the specified URL
-  fetch(`http://localhost:3000${data.endpoint}`)
+  fetch("http://localhost:3000/testGet")
     // When the response is received, convert it to text
     .then((response) => response.text())
     // When the text data is received, log it to the console
@@ -24,17 +24,17 @@ const postData = (event) => {
 
   // Get form data
   const formData = new FormData(event.target);
-  const data = Object.fromEntries(formData.entries());
+  const formDataOBject = Object.fromEntries(formData.entries());
 
   // Make a fetch request to the specified URL
-  fetch(`http://localhost:3000${data.endpoint}`, {
+  fetch("http://localhost:3000/testPost", {
     method: "POST", // Specify the request method
     headers: {
       "Content-Type": "text/plain", // Set the content type to text
       //"Content-Type": "application/json", // Set the Content-Type to application/json
       //Authorization: "", // Add an authorization header
     },
-    body: data.message,
+    body: formDataOBject.message,
     //body: JSON.stringify(data), //convert js object to JSON
   })
     // When the response is received, convert it to text
